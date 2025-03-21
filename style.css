@@ -55,7 +55,7 @@ h1 {
   padding: 10px 20px;
   font-size: 1rem;
   color: white;
-  background-color: #4a90e2;
+  background-color: #3578bb;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -64,10 +64,11 @@ h1 {
 }
 
 .download-btn:hover {
-  background-color: #357abd;
+  background-color: #27598b;
 }
 
-#canvas {
+#canvas,
+.file-label {
   display: none;
 }
 

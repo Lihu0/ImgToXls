@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image to Excel</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js" defer></script>
 
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
@@ -16,10 +16,12 @@
 
     <div class="container">
         <h1>Image to Excel</h1>
+        <label for="imageInput" class="file-label
+        ">Choose an image</label>
         <input type="file" id="imageInput" accept="image/*" class="file-input">
         <br />
         <br />
-        <img id="imagePreview" src="" class="image-preview">
+        <img id="imagePreview" src="" class="image-preview" alt="">
         <br />
         <canvas id="canvas" class="canvas"></canvas>
         <button id="download" class="download-btn">Download Excel</button>
