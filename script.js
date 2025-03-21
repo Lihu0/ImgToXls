@@ -104,9 +104,9 @@ document.getElementById("download").addEventListener("click", function () {
   }
   ws["!ref"] = `${refStartColumn}${refStartRow}:${refEndColumn}${refEndRow}`;
   const numColumns = canvas.width * 3;
-  ws["!cols"] = Array(numColumns).fill({ wch: 5 });
+  ws["!cols"] = Array(numColumns).fill({ wch: 2.75 });
   const numRows = canvas.height;
   ws["!rows"] = Array(numRows).fill({ hpt: 50 });
   const wb = { SheetNames: ["Sheet1"], Sheets: { Sheet1: ws } };
-  XLSX.writeFile(wb, "rgb_cells_excel.xlsx");
+  XLSX.writeFile(wb, "image.xlsx");
 });
