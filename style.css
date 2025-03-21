@@ -67,8 +67,7 @@ h1 {
   background-color: #27598b;
 }
 
-#canvas,
-.file-label {
+#canvas {
   display: none;
 }
 
