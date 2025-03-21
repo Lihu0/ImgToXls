@@ -6,12 +6,6 @@ Takes an image and converts its pixels into an Excel sheet. Each pixel's red, gr
 | Green    | Green    | Green    | Green    |
 | Blue     | Blue     | Blue     | Blue     |
 
-| Pixel 5  | Pixel 6  | Pixel 7  | Pixel 8  |
-|----------|----------|----------|----------|
-| Red      | Red      | Red      | Red      |
-| Green    | Green    | Green    | Green    |
-| Blue     | Blue     | Blue     | Blue     |
-
 ### Frameworks used:
 - [SheetJS](https://www.npmjs.com/package/xlsx)
 - [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style)
