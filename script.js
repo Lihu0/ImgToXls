@@ -84,19 +84,28 @@ document.getElementById("download").addEventListener("click", function () {
 
       ws[cellColumn + (j * 3 + 1)] = {
         t: "n",
-        s: { fill: { fgColor: { rgb: rgbToHex(red, 0, 0) } } },
+        s: {
+          fill: { fgColor: { rgb: rgbToHex(red, 0, 0) } },
+          font: { color: { rgb: "000000" } },
+        },
         v: red,
       };
 
       ws[cellColumn + (j * 3 + 2)] = {
         t: "n",
-        s: { fill: { fgColor: { rgb: rgbToHex(0, green, 0) } } },
+        s: {
+          fill: { fgColor: { rgb: rgbToHex(0, green, 0) } },
+          font: { color: { rgb: "000000" } },
+        },
         v: green,
       };
 
       ws[cellColumn + (j * 3 + 3)] = {
         t: "n",
-        s: { fill: { fgColor: { rgb: rgbToHex(0, 0, blue) } } },
+        s: {
+          fill: { fgColor: { rgb: rgbToHex(0, 0, blue) } },
+          font: { color: { rgb: "000000" } },
+        },
         v: blue,
       };
     }
