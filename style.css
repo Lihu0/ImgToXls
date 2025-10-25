@@ -7,7 +7,14 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f4f4f4;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  border: 4px dashed transparent;
+  cursor: pointer;
+}
+
+body.dragover {
+  border-color: #3578bb;
+  background-color: #e0f0ff;
 }
 
 .container {
@@ -75,6 +82,11 @@ h1 {
   body {
     background-color: #181818;
     color: #f4f4f4;
+  }
+
+  body.dragover {
+    background-color: #1f2a40;
+    border-color: #4a90e2;
   }
 
   .container {
