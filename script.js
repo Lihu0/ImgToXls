@@ -21,10 +21,7 @@ function rgbToHex(r, g, b) {
   r = Math.min(255, Math.max(0, r));
   g = Math.min(255, Math.max(0, g));
   b = Math.min(255, Math.max(0, b));
-  return ((1 << 24) | (r << 16) | (g << 8) | b)
-    .toString(16)
-    .slice(1)
-    .toUpperCase();
+  return ((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1).toUpperCase();
 }
 
 function resizeImage() {
@@ -37,13 +34,31 @@ function resizeImage() {
   context.drawImage(img, 0, 0, width, height);
 }
 
-imageInput.addEventListener("change", function (event) {
-  const file = event.target.files[0];
-  if (file) {
+function handleFile(file) {
+  if (file && file.type.startsWith("image/")) {
     const fileURL = URL.createObjectURL(file);
     imagePreview.src = fileURL;
     img.src = fileURL;
   }
+}
+
+imageInput.addEventListener("change", function (event) {
+  handleFile(event.target.files[0]);
+});
+
+document.body.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  document.body.classList.add("dragover");
+});
+
+document.body.addEventListener("dragleave", () => {
+  document.body.classList.remove("dragover");
+});
+
+document.body.addEventListener("drop", (e) => {
+  e.preventDefault();
+  document.body.classList.remove("dragover");
+  handleFile(e.dataTransfer.files[0]);
 });
 
 img.onload = function () {
@@ -55,12 +70,7 @@ img.onload = function () {
 };
 
 document.getElementById("download").addEventListener("click", function () {
-  if (
-    canvas.width === 0 ||
-    canvas.height === 0 ||
-    img.width === 0 ||
-    img.height === 0
-  ) {
+  if (canvas.width === 0 || canvas.height === 0 || img.width === 0 || img.height === 0) {
     alert("Please upload an image first.");
     return;
   }
@@ -84,29 +94,18 @@ document.getElementById("download").addEventListener("click", function () {
 
       ws[cellColumn + (j * 3 + 1)] = {
         t: "n",
-        s: {
-          fill: { fgColor: { rgb: rgbToHex(red, 0, 0) } },
-          font: { color: { rgb: "000000" } },
-        },
-        v: red,
+        s: { fill: { fgColor: { rgb: rgbToHex(red, 0, 0) } }, font: { color: { rgb: "000000" } } },
+        v: red
       };
-
       ws[cellColumn + (j * 3 + 2)] = {
         t: "n",
-        s: {
-          fill: { fgColor: { rgb: rgbToHex(0, green, 0) } },
-          font: { color: { rgb: "000000" } },
-        },
-        v: green,
+        s: { fill: { fgColor: { rgb: rgbToHex(0, green, 0) } }, font: { color: { rgb: "000000" } } },
+        v: green
       };
-
       ws[cellColumn + (j * 3 + 3)] = {
         t: "n",
-        s: {
-          fill: { fgColor: { rgb: rgbToHex(0, 0, blue) } },
-          font: { color: { rgb: "000000" } },
-        },
-        v: blue,
+        s: { fill: { fgColor: { rgb: rgbToHex(0, 0, blue) } }, font: { color: { rgb: "000000" } } },
+        v: blue
       };
     }
   }
