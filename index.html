@@ -7,7 +7,6 @@
     <title>Image to Excel</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js" defer></script>
-
     <meta name="description"
         content="ImgToXls extracts the pixel values from an image and organizes them into a Excel table, displaying the red, green, and blue values for each pixel in a structured collum-by-collum format.">
     <script src="script.js" defer></script>
@@ -15,24 +14,19 @@
 </head>
 
 <body>
-
     <div class="container">
         <h1>Image to Excel</h1>
         <label class="file-label">
             Choose an image
             <input type="file" id="imageInput" accept="image/*" class="file-input">
         </label>
-        <br />
-        <br />
         <img id="imagePreview" src="" class="image-preview" alt="">
-        <br />
-        <canvas id="canvas" class="canvas"></canvas>
+        <canvas id="canvas"></canvas>
         <button id="download" class="download-btn">Download Excel</button>
         <footer>
             <h3>האתר של ליהוא לויט</h3>
         </footer>
     </div>
-
 </body>
 
 </html>
