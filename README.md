@@ -32,3 +32,6 @@ Simply open [`index.html`](index.html) in your preferred web browser.
 3. **Use the application**:
    - Select an image using the file input.
    - Click **Export to Excel** to generate an Excel file with each pixel's RGB values.
+
+> [!IMPORTANT]  
+> Excel files don't show properly with Excel set to dark mode
