@@ -1,5 +1,7 @@
 # ImgToXls
 
+![EXCEL-Ob-OJz8-Zu84](https://i.postimg.cc/cL0fgk3m/EXCEL-Ob-OJz8Zu84.png)
+
 Converts an image into an Excel sheet, where each pixel's **Red**, **Green**, and **Blue** values are displayed vertically in the same column, like this:
 
 | Pixel 1 | Pixel 2 | Pixel 3 | Pixel 4 |
