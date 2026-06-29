@@ -24,7 +24,7 @@ Converts an image into an Excel sheet, where each pixel's **Red**, **Green**, an
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/Lihu0/ImgToXls.git
+git clone https://github.com/Lihu0/img-to-xls.git
 cd ImgToXls
 ```
 
